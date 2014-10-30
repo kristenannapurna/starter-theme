@@ -6,7 +6,7 @@ module.exports = function(grunt) {
    sass: {
    	dist: {
    		files: {
-   		'style.css' : 'style.scss'
+   		'style.css' : 'scss/style.scss'
    		}
    	} 	
    }, 
@@ -44,5 +44,5 @@ module.exports = function(grunt) {
  grunt.loadNpmTasks('grunt-contrib-connect');
 
  // Default task(s).
- grunt.registerTask('default', ['connect','watch']);
+ grunt.registerTask('default', ['sass','watch']);
 };
