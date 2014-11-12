@@ -4,13 +4,39 @@ textarea {
 	border: $border;
 	padding: 4px 10px;
 	-webkit-appearance: none;
+	width: 100%;
 }
 #{$all-text-inputs-focus},
 textarea:focus {
 	color: $text;
+	outline: none;
+}
+
+input{
+	width: 100%;
 }
 input[type=submit] {
 	-webkit-appearance: none;
+	background-color: $bg2;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: $headingfont;
+	font-size: 20px;
+	letter-spacing: 5px;
+	padding: 10px;
+	width: 100%;
+	transition: all 0.5s;
+
+	&:hover{
+		background-color: $hover;
+	}
+
+}
+
+
+
+input:focus{
+	outline: none;
 }
 
 /* Placeholders */
@@ -22,5 +48,11 @@ input[type=submit] {
 input#s {
 }
 input#searchsubmit {
+}
+
+form.wpcf7-form{
+	p{
+		padding-bottom: 10px;
+	}
 }
 

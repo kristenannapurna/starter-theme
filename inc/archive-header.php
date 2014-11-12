@@ -2,7 +2,7 @@
     <h1 class="archive-title">
     <?php
         if ( is_category() ) :
-            single_cat_title();
+            single_cat_title('Filed Under: ');
 
         elseif ( is_tag() ) :
             single_tag_title();

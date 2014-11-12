@@ -3,6 +3,11 @@
 }
 
 .blog{
+	.singlePost{
+		width: 80%;
+		margin: 0 auto;
+	}
+
 	.blogdata{
 		text-align: center;
 		font-size: 16px;
@@ -19,9 +24,6 @@
 	p{
 		line-height: 1.8;
 		padding-bottom: 20px;
-	}
-	img{
-		padding: 20px;
 	}
 }
 

@@ -18,10 +18,16 @@ body {
 #primary {
 	margin: 0 auto;
 	width: 1200px;	
+	.contactForm{
+		width: 70%;
+		margin: 0 auto;
+		padding-bottom: 50px;
+	}
 	article{
 
 	}
 }
+
 #content {
 	margin: 0;
 	width: 100%;
@@ -39,9 +45,12 @@ body {
 }
 
 .post{
+	padding-bottom: 20px;
+	margin: 0;
 	.theImage{
 		width: 50%;
 		float: left;
+		padding-right: 20px;
 		img{
 			transition: all 0.5s;
 		}
@@ -50,9 +59,8 @@ body {
 		width: 50%;
 		display: inline-block;
 		float: left;
-		padding-top: 20px;
 		span{
-			padding: 0px 20px;
+			padding: 0px 10px;
 		}
 		h2{
 			text-align: left;
@@ -71,3 +79,28 @@ body {
 
 /* Sticky footer */
 // @include sticky-footer(50px, '#page','#main','#colophon');
+
+
+//contact page
+
+
+#form{
+	display: inline-block;
+	width: 45%;
+	margin-right: 5%;
+	float: left;
+	.entry-content{
+		padding: 0;
+		h1{
+			font-size: 30px;
+			margin-bottom: 20px;
+
+		}
+	}
+
+}
+.contactImage{
+	width: 50%;
+	float: left;
+}
+

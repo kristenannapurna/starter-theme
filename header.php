@@ -20,7 +20,7 @@
     <meta charset="<?php bloginfo( "charset" ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title><?php wp_title( "|", true, "right" ); ?></title>
+    <title><?php wp_title( "|", true, "right" ); ?> <?php the_title(); ?></title>
 
     <!-- favicon & links -->
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" />
