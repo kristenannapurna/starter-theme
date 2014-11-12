@@ -1,4 +1,3 @@
-starter-theme
+this-is-perfect
 =============
-I'm making my own wordpress starter theme from scratch. 
-
+Custom WP theme for This Is Perfect.
