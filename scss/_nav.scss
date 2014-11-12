@@ -20,27 +20,35 @@
 			float: left;
 			position: relative;
 			right: 50%;
+			font-family: 'Josefin Sans', sans-serif;
+			text-transform: uppercase;
+			font-size: 20px;
 			a {
 				letter-spacing: 0.15em;
 				display: block;
-				padding: 3px 0 3px 10px;
-				margin: 2px 0;
+				padding: 15px;
+				margin: 140px 0;
 				text-decoration: none;
 				cursor: pointer;
-				&:after {
-					content: '/';
-					color: $text;
-				}
+				transition: all 0.5s;
 				:hover {
 					color: $hover;
 				}
 			}
-			&:last-of-type a:after {
-				content: none;
-			}
+			
 		}
+		li:nth-child(3) a {
+			margin: 0;
+			padding: 140px 100px;
+			color: transparent;
+		}
+		
 		
 		
 	}
 	
+}
+
+#xnav-below{
+	padding-bottom: 50px;
 }

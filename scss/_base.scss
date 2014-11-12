@@ -2,15 +2,17 @@
  *******************/
 
 /* Sizes */
-$width: 1000px;
-$width-outer: $width + 30px;
+$width: 100%;
+$width-outer: $width;
 
 /* Colors */
-$text: #555;
-$links: blue;
-$hover: red;
+$text: #333;
+$links: #333;
+$hover: #E9C96F;
 
 $bg: #FFF;
+
+$bg2: #0F0B23;
 
 /* Fonts */
 $main: sans-serif;

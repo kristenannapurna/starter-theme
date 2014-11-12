@@ -226,3 +226,15 @@ textarea {
 }
 
 /* 'alert' has a basic style, since it's useful to have it standing out for testing purposes. */
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }

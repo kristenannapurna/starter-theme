@@ -1,8 +1,16 @@
 #site-header {
 	margin-bottom: 45px;
+	margin-top: 25px;
 	position: relative;
 	z-index: 250;
+	background: url(assets/images/thisisperfectlogo.png);
+	background-size: auto 300px;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 300px;
 	img {
 		height: auto;
 	}
+
 }
+

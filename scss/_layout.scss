@@ -4,17 +4,23 @@ body {
 	padding: 0;
 	min-width: $width-outer;
 }
-#page {
+#page {	
 	width: $width;
-	padding: 0 15px;
+	padding: 0;
+	margin: 0 auto;
 }
 #main {
 	clear: both;
+	.attachment-Banner{
+		width: 100%;
+	}
 }
 #primary {
-	float: left;
-	margin: 0;
-	width: 600px;	
+	margin: 0 auto;
+	width: 1200px;	
+	article{
+
+	}
 }
 #content {
 	margin: 0;
@@ -26,14 +32,42 @@ body {
 	width: 100%;
 	float: none;
 }
-#secondary {
-	float: right;
-	padding: 0;
-	width: 250px;
-}
+
 #colophon {
 	clear: both;
 	overflow: hidden;
 }
+
+.post{
+	.theImage{
+		width: 50%;
+		float: left;
+		img{
+			transition: all 0.5s;
+		}
+	}
+	.theContent{
+		width: 50%;
+		display: inline-block;
+		float: left;
+		padding-top: 20px;
+		span{
+			padding: 0px 20px;
+		}
+		h2{
+			text-align: left;
+		}
+	}
+
+
+}
+
+.post:hover{
+	img{
+		opacity: 0.8;
+	}
+}
+
+
 /* Sticky footer */
-@include sticky-footer(50px, '#page','#main','#colophon');
+// @include sticky-footer(50px, '#page','#main','#colophon');

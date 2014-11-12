@@ -1,30 +1,36 @@
 /* Web fonts integration*/
 
-@mixin font-face($font-family, $file-path, $font-weight: normal, $font-style: normal) {
-  @font-face {
-    font-family: $font-family;
-      src: url('#{$file-path}.eot');
-      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
-           url('#{$file-path}.woff') format('woff'),
-           url('#{$file-path}.ttf') format('truetype');
-    font-weight: $font-weight;
-    font-style: $font-style;
-  }
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(http://fonts.googleapis.com/css?family=Lora);
+
+$headingfont: 'Josefin Sans', sans-serif;
+
+// @mixin font-face($font-family, $file-path, $font-weight: normal, $font-style: normal) {
+//   @font-face {
+//     font-family: $font-family;
+//       src: url('#{$file-path}.eot');
+//       src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+//            url('#{$file-path}.woff') format('woff'),
+//            url('#{$file-path}.ttf') format('truetype');
+//     font-weight: $font-weight;
+//     font-style: $font-style;
+//   }
+// }
+
+
+// @include font-face(name1, 'inc/fonts/filename');
+// @include font-face(name2, 'inc/fonts/filename');
+
+@mixin headings {
+  font-family: $headingfont;
+  font-weight: 700; 
+  text-transform: uppercase;
 }
 
-
-@include font-face(name1, 'inc/fonts/filename');
-@include font-face(name2, 'inc/fonts/filename');
-
-@mixin name1 {
-  font-family: 'name1', sans-serif;
-  font-weight: normal; font-style: normal; 
-}
-
-@mixin name2 {
-  font-family: 'name2', sans-serif;
-  font-weight: normal; font-style: normal; 
-}
+// @mixin name2 {
+//   font-family: 'name2', sans-serif;
+//   font-weight: normal; font-style: normal; 
+// }
 
 
 /* Styling starts here */
@@ -39,8 +45,13 @@ body, input, textarea {
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	clear: both;
+	text-transform: uppercase;
+	font-family: $headingfont;
+
 }
+
 h1 {
+
 	
 }
 h2 {
@@ -69,7 +80,10 @@ hr {
 
 /* Text elements */
 p {
-	margin-bottom: 1.5em;
+	line-height: 1.5;
+	font-size: 16px;
+	font-family: 'Lora', serif;
+
 }
 ul, ol {
 	margin: 0 0 1.5em 2.5em;

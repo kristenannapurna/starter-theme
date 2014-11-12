@@ -27,7 +27,9 @@ if ( ! function_exists( 'starter_theme_setup' ) ):
         add_theme_support( 'automatic-feed-links' );
 
         // Enable support for Post Thumbnails on posts and pages
-        //add_theme_support( 'post-thumbnails' );
+        add_theme_support( 'post-thumbnails' );
+        add_image_size('Blog Archive', 550, 290, true);
+        add_image_size('Banner', 1000, 150, true);
 
         // Enable support for Post Formats.
         add_theme_support( 'post-formats', array( 
@@ -49,6 +51,7 @@ if ( ! function_exists( 'starter_theme_setup' ) ):
         // Enable support for editable menus via Appearance > Menus
         register_nav_menus( array(
             'primary' => __( 'Primary Menu', 'starter-theme' ),
+            'footer' => __('Footer Menu', 'starter-theme'),
         ) );
 
         // Add custom image sizes
@@ -121,4 +124,31 @@ show_admin_bar( false );
 //return $init;
 //}
 //add_filter('tiny_mce_before_init', 'themeFunction_change_mce_options');
+
+//load Bootstrap CDN
+
+
+add_action( 'wp_enqueue_scripts', 'prefix_enqueue_awesome' );
+/**
+ * Register and load font awesome CSS files using a CDN.
+ *
+ * @link   http://www.bootstrapcdn.com/#fontawesome
+ * @author FAT Media
+ */
+function prefix_enqueue_awesome() {
+    wp_enqueue_style( 'prefix-font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', array(), '4.0.3' );
+}
+
+
+
+//removes image link by default
+
+function wpb_imagelink_setup() {
+    $image_set = get_option( 'image_default_link_type' );
+    
+    if ($image_set !== 'none') {
+        update_option('image_default_link_type', 'none');
+    }
+}
+add_action('admin_init', 'wpb_imagelink_setup', 10);
 

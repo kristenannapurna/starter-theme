@@ -15,24 +15,38 @@ get_header(); ?>
     <?php if ( have_posts() ) : ?>
         <!-- there IS content for this query -->
 
+        <?php // check if we're on an archive page
+        if ( is_archive() ) :
+            // if so, print the archive title before the loop begins
+            get_template_part( 'inc/archive-header' );
+        endif; ?>
+
+
         <?php /* Start the Loop */ ?>
         <?php while ( have_posts() ) : the_post(); ?>
+            
+        
+            <div class="post clearfix">
+              <a href=" <?php the_permalink(); ?> ">
+                <div class="theImage"> 
+                    <?php the_post_thumbnail('Blog Archive'); ?> 
+                </div>
 
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <header class="entry-header">
-                    <h1><?php the_title(); ?></h1>
-                </header><!-- .entry-header -->
+                <div class="theContent"> 
+                    <h2><?php the_title(); ?></h2>
+                    <h3><?php echo get_the_date(); ?><span>&#8226</span><?php the_category(', ') ?> </h3> 
+                    <p> <?php the_excerpt(); ?></p>
+                </div>
+              </a>
+        </div>
+            
 
-                <?php the_content(); ?>
-
-            </article><!-- #post-<?php the_ID(); ?> -->
 
         <?php endwhile; ?>
 
-        <nav id="nav-below">
-            <div class="nav-previous"><?php next_posts_link( __( "Older posts", "starter-theme" ) ); ?></div>
-            <div class="nav-next"><?php previous_posts_link( __( "Newer posts", "starter-theme" ) ); ?></div>
-        </nav><!-- #nav-above -->
+
+        <?php get_template_part( 'inc/pagination' ); ?>
+
 
     <?php else : ?>
         <!-- there IS NOT content for this query -->
@@ -45,6 +59,7 @@ get_header(); ?>
             <p><?php _e( "We can&#039;t find content for this page!", "starter-theme" ); ?></p>
         </article><!-- #post-0 -->
 
+        <?php get_template_part( 'content', 'none' ); ?>
     <?php endif; ?>
 
 </section><!-- #primary -->

@@ -1,0 +1,39 @@
+.widget-area{
+	max-width: 1200px;
+	margin: 0 auto;
+	aside{
+		width: 30%;
+		float: left;
+		margin: 2%;
+		p{
+			padding-bottom: 10px;
+		}
+	}
+	#text-2{
+		margin-left: 0;
+		h2{
+			text-align: right;
+			
+		}
+	}
+	#text-4{
+		margin-right: 0;
+	}
+}
+
+
+.widget{
+	.widget-title{
+		color: #fff;
+		background: $bg2;
+		padding: 5px 5px 5px 10px;
+		margin-bottom: 10px;
+		font-size: 20px;
+	}
+}
+
+.wpcf7-form-control-wrap{
+	textarea{
+		height: 200px;
+	}
+}
