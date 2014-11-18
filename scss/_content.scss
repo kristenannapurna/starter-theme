@@ -116,3 +116,102 @@ img {
 	width: 23%;
 	padding-right: 2%;
 }
+
+//portfolio page
+
+#portfolio-grid{
+	max-width: 900px;
+	margin: 0 auto;
+	.portfolio-item{
+		position: relative;
+		float: left;
+		margin: 10px;
+		padding: 0;
+	}
+}
+
+.sortPortfolio{
+	text-align: center;
+	li{	
+		text-decoration: none;
+		font-family: $headingfont;
+		text-transform: uppercase;
+		font-size: 20px;
+		display: inline-block;
+		padding: 20px;
+	}
+}
+
+footer{
+	transition: all 0.5s;
+}
+//homepage
+
+.galleryWall{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.galleryItem{
+	margin-bottom: 30px;
+	
+
+}
+
+
+
+.galleryItem,
+.grid-sizer {
+	width: 30.6%;
+
+	
+}
+
+.gutter-sizer{
+	width: 4%;
+}
+
+
+// aboutpage
+.aboutPage{
+	max-width: 900px;
+	margin: 0 auto;
+}
+div.aboutImage img{
+	
+}
+
+.aboutPage{
+	max-width: 900px;
+	margin-bottom: 100px;
+	.box, img{
+		display: inline-block;
+		width: 50%;
+		float: left;
+	}
+	.box{
+		border: 3px solid #222;
+		padding: 40px;
+		text-align: center;
+		position: relative;
+		background: #fff;
+
+		p{
+			line-height: 2;
+		}
+	}
+	.box1{
+		transform: rotate(-10deg);
+		top: 60px;
+	}
+
+	.box2{
+		transform: rotate(10deg);
+	}
+
+	.img2{
+		position: relative;
+		z-index: -1;
+	}
+
+
+}

@@ -237,7 +237,7 @@ body {
 
 #primary {
   margin: 0 auto;
-  width: 1200px; }
+  max-width: 1200px; }
   #primary .contactForm {
     width: 70%;
     margin: 0 auto;
@@ -538,15 +538,26 @@ textarea {
   border: 1px solid black;
   padding: 4px 10px;
   -webkit-appearance: none;
-  width: 100%; }
+  width: 100%;
+  background: #FAFAFA;
+  -webkit-transition: all 0.5s;
+          transition: all 0.5s;
+  border: 1px solid #ccc; }
 
 input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
 textarea:focus {
   color: #333333;
-  outline: none; }
+  outline: none;
+  background: #fff; }
 
 input {
-  width: 100%; }
+  width: 100%;
+  background: #FAFAFA;
+  -webkit-transition: all 0.5s;
+          transition: all 0.5s;
+  border: 1px solid #ccc; }
+  input:focus {
+    background: #fff; }
 
 input[type=submit] {
   -webkit-appearance: none;
@@ -686,6 +697,75 @@ img {
 #content .gallery-columns-4 .gallery-item {
   width: 23%;
   padding-right: 2%; }
+
+#portfolio-grid {
+  max-width: 900px;
+  margin: 0 auto; }
+  #portfolio-grid .portfolio-item {
+    position: relative;
+    float: left;
+    margin: 10px;
+    padding: 0; }
+
+.sortPortfolio {
+  text-align: center; }
+  .sortPortfolio li {
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    display: inline-block;
+    padding: 20px; }
+
+footer {
+  -webkit-transition: all 0.5s;
+          transition: all 0.5s; }
+
+.galleryWall {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.galleryItem {
+  margin-bottom: 30px; }
+
+.galleryItem,
+.grid-sizer {
+  width: 30.6%; }
+
+.gutter-sizer {
+  width: 4%; }
+
+.aboutPage {
+  max-width: 900px;
+  margin: 0 auto; }
+
+.aboutPage {
+  max-width: 900px;
+  margin-bottom: 100px; }
+  .aboutPage .box, .aboutPage img {
+    display: inline-block;
+    width: 50%;
+    float: left; }
+  .aboutPage .box {
+    border: 3px solid #222;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    background: #fff; }
+    .aboutPage .box p {
+      line-height: 2; }
+  .aboutPage .box1 {
+    -webkit-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+    top: 60px; }
+  .aboutPage .box2 {
+    -webkit-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+            transform: rotate(10deg); }
+  .aboutPage .img2 {
+    position: relative;
+    z-index: -1; }
 
 .page-link {
   clear: both;
@@ -859,3 +939,50 @@ article.comment {
   padding-bottom: 2px; }
 
 /* Handle sticky posts */
+/* =MEDIA QUERIES
+------------------ */
+@media all and (max-width: 850px) {
+  #site-header {
+    background-size: auto 100px;
+    background-position-x: 100px;
+    background-position-y: 40px; }
+    #site-header li {
+      font-size: 15px; }
+    #site-header #access ul li:nth-child(3) a {
+      padding: 40px 20px;
+      position: absolute;
+      top: 35px;
+      right: 135px; }
+
+  #access ul li a {
+    margin: 70px 0;
+    font-size: 15px; }
+
+  #access .menu-main-navigation-container {
+    width: 75%;
+    float: right; } }
+@media all and (max-width: 600px) {
+  #site-header {
+    height: 130px;
+    background-position-y: 20px;
+    background-position-x: 320px; }
+
+  #access ul li {
+    width: 100%; }
+
+  #access ul li a {
+    padding: 5px;
+    margin: 0; }
+
+  #copyright a {
+    display: none; }
+
+  #colophon .left {
+    width: 100%;
+    float: none;
+    text-align: center; } }
+@media all and (max-width: 380px) {
+  #site-header {
+    height: 130px;
+    background-position-y: 20px;
+    background-position-x: 220px; } }

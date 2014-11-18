@@ -80,25 +80,67 @@ add_action( 'widgets_init', 'starter_theme_widgets_init' );
 function starter_theme_scripts() {
     // theme style.css file
     wp_enqueue_style( 'starter-theme-style', get_stylesheet_uri() );
+    wp_enqueue_style('fancybox-css', get_template_directory_uri() . '/assets/vendor/fancybox/jquery.fancybox.css' );
 
     // threaded comments
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
+
+
+    //jquery
+
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", false, null, true);
+    wp_enqueue_script('jquery');
+
     // vendor scripts
-//  wp_enqueue_script(
-//      'vendor',
-//      get_template_directory_uri() . '/assets/vendor/newscript.js',
-//      array('jquery')
-//  );
+ wp_enqueue_script(
+     'vendor',
+     get_template_directory_uri() . '/assets/vendor/html5shiv.min.js',
+     array('jquery')
+ );
+
+ wp_enqueue_script(
+    'isotope',
+    get_template_directory_uri() . '/assets/vendor/isotope.pkgd.min.js',
+    array('jquery')
+    );
+
+ wp_enqueue_script(
+    'fancybox',
+    get_template_directory_uri() . '/assets/vendor/fancybox/jquery.fancybox.js',
+    array('jquery')
+    );
+
     // theme scripts
-//  wp_enqueue_script(
-//      'theme-init',
-//      get_template_directory_uri() . '/assets/theme.js',
-//      array('jquery')
-//  );
+ wp_enqueue_script(
+     'theme-init',
+     get_template_directory_uri() . '/assets/theme.js',
+     array('jquery')
+ );
+
+ wp_enqueue_script(
+    'imagesloaded',
+    get_template_directory_uri() . '/assets/vendor/imagesloaded.pkgd.min.js',
+    array('jquery')
+
+    );
+
+ wp_enqueue_script(
+    'perfect-masonry',
+    get_template_directory_uri() . '/assets/vendor/jquery.isotope.perfectmasonry.js',
+    array(
+        'jquery', 
+        'isotope'
+        )
+    );
 }    
-add_action('wp_enqueue_scripts', 'starter_theme_scripts');
+
+
+add_action('wp_enqueue_scripts', 'starter_theme_scripts', 11 );
+
+
 
 /**
  * Remove the front-end admin bar for everybody, always

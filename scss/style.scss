@@ -47,6 +47,12 @@ Text Domain: themeTextDomain
 @import "content";
 @import "pages/all";
 
+
 /* =BLOG SPECIFIC
 ------------------ */
 @import "blog/all";
+
+/* =MEDIA QUERIES
+------------------ */
+
+@import "media";

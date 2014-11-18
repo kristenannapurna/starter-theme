@@ -1,0 +1,69 @@
+@media all and (max-width: 1200px){
+	
+}
+
+@media all and (max-width: 850px) {
+	#site-header{
+		background-size: auto 100px;
+		background-position-x: 100px;
+		background-position-y: 40px;
+		li{
+			font-size: 15px;
+			
+		}
+		#access ul li:nth-child(3) a {
+			padding: 40px 20px;
+			position: absolute;
+			top: 35px;
+			right: 135px;
+		}
+	}
+
+#access ul li a{
+				margin: 70px 0;
+				font-size: 15px;
+			}
+
+#access .menu-main-navigation-container{
+	width: 75%;
+	float: right;
+}
+}
+
+@media all and (max-width: 600px){
+
+	#site-header{
+		height: 130px;
+		background-position-y: 20px;
+		background-position-x: 320px;
+	}
+
+	#access ul li{
+		width: 100%;
+	}
+
+	#access ul li a{
+				padding: 5px;
+				margin: 0;
+			}
+	#copyright a{
+		display: none;
+	}
+
+	#colophon .left{
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+	
+}
+
+@media all and (max-width: 380px){
+	#site-header{
+		height: 130px;
+		background-position-y: 20px;
+		background-position-x: 220px;
+	}
+
+	
+}

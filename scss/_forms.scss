@@ -5,15 +5,26 @@ textarea {
 	padding: 4px 10px;
 	-webkit-appearance: none;
 	width: 100%;
+	background: #FAFAFA;
+	transition: all 0.5s;
+	border: 1px solid #ccc;
 }
 #{$all-text-inputs-focus},
 textarea:focus {
 	color: $text;
 	outline: none;
+	background: #fff;
 }
 
 input{
 	width: 100%;
+	background: #FAFAFA;
+	transition: all 0.5s;
+	border: 1px solid #ccc;
+
+	&:focus{
+		background: #fff;
+	}
 }
 input[type=submit] {
 	-webkit-appearance: none;
