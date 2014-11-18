@@ -127,14 +127,7 @@ function starter_theme_scripts() {
 
     );
 
- wp_enqueue_script(
-    'perfect-masonry',
-    get_template_directory_uri() . '/assets/vendor/jquery.isotope.perfectmasonry.js',
-    array(
-        'jquery', 
-        'isotope'
-        )
-    );
+
 }    
 
 
