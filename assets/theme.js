@@ -11,8 +11,9 @@ jQuery(document).ready(function() {
 			itemSelector: '.portfolio-item', 
 			resizable: false,
 			masonry: {
-				isFitWidth: false,
-				columnWidth: $container.width()/5
+				isFitWidth: true,
+				columnWidth: 200,
+				gutter: 30
 			}
 		});
 		

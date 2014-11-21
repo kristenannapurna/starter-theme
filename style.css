@@ -34,7 +34,6 @@ Text Domain: themeTextDomain
   (B) http://csswizardry.com/web-design+/#css
   (C) WordPress image styles */
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
-@import url(http://fonts.googleapis.com/css?family=Lora);
 html, body {
   height: 100%; }
 
@@ -430,8 +429,8 @@ hr {
 /* Text elements */
 p {
   line-height: 1.5;
-  font-size: 16px;
-  font-family: 'Lora', serif; }
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif; }
 
 ul, ol {
   margin: 0 0 1.5em 2.5em; }
@@ -699,12 +698,12 @@ img {
   padding-right: 2%; }
 
 #portfolio-grid {
-  max-width: 900px;
+  max-width: 100%;
   margin: 0 auto; }
   #portfolio-grid .portfolio-item {
     position: relative;
     float: left;
-    margin: 10px;
+    margin-bottom: 10px;
     padding: 0; }
 
 .sortPortfolio {
@@ -742,11 +741,15 @@ footer {
 .aboutPage {
   max-width: 900px;
   margin-bottom: 100px; }
+  .aboutPage .img2 {
+    position: absolute;
+    top: 160px;
+    left: -110px;
+    z-index: -1; }
   .aboutPage .box, .aboutPage img {
-    display: inline-block;
-    width: 50%;
-    float: left; }
+    width: 50%; }
   .aboutPage .box {
+    margin: 0 auto;
     border: 3px solid #222;
     padding: 40px;
     text-align: center;
@@ -754,17 +757,10 @@ footer {
     background: #fff; }
     .aboutPage .box p {
       line-height: 2; }
-  .aboutPage .box1 {
-    -webkit-transform: rotate(-10deg);
-        -ms-transform: rotate(-10deg);
-            transform: rotate(-10deg);
-    top: 60px; }
-  .aboutPage .box2 {
-    -webkit-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-            transform: rotate(10deg); }
-  .aboutPage .img2 {
-    position: relative;
+  .aboutPage img[alt="annie"] {
+    position: absolute;
+    top: 30px;
+    right: -110px;
     z-index: -1; }
 
 .page-link {
@@ -917,7 +913,7 @@ article.comment {
     padding: 0 25px; }
 .blog h2 {
   text-align: center;
-  font-size: 26px;
+  font-size: 46px;
   font-weight: 700; }
 .blog p {
   line-height: 1.8;
@@ -941,7 +937,30 @@ article.comment {
 /* Handle sticky posts */
 /* =MEDIA QUERIES
 ------------------ */
+@media all and (max-width: 1200px) {
+  #copyright a[rel="nofollow"] {
+    display: none; } }
+@media all and (max-width: 890px) {
+  .aboutPage {
+    max-width: 610px;
+    margin-bottom: 0px;
+    padding-bottom: 100px; } }
 @media all and (max-width: 850px) {
+  #nav-below {
+    width: 90%; }
+
+  section.contactImage {
+    display: block; }
+    section.contactImage img {
+      display: none; }
+
+  #primary .contactForm {
+    width: 80%;
+    margin: 0 auto; }
+    #primary .contactForm #form {
+      display: block;
+      width: 100%; }
+
   #site-header {
     background-size: auto 100px;
     background-position-x: 100px;
@@ -965,7 +984,57 @@ article.comment {
 
   .widget-area aside {
     width: 100%;
-    padding: 20px; } }
+    padding: 20px; }
+
+  #colophon .left {
+    width: 100%;
+    float: none;
+    text-align: center;
+    padding: 40px 0 10px 0; }
+
+  #colophon .right {
+    width: 100%;
+    text-align: center; }
+    #colophon .right span {
+      margin: 10px; }
+    #colophon .right nav {
+      padding: 0; } }
+@media all and (max-width: 730px) {
+  .aboutPage {
+    padding-bottom: 100px; }
+    .aboutPage .box {
+      width: 100%; }
+
+  .aboutPage img {
+    display: none; }
+
+  .archive-header {
+    text-align: center;
+    padding-bottom: 20px; }
+
+  .post .theImage {
+    display: block;
+    margin: 0 auto;
+    float: none; }
+
+  .post .theContent {
+    display: block;
+    float: none;
+    margin: 0 auto; }
+
+  .post .theContent h2 {
+    text-align: center; }
+
+  .blog h2 {
+    font-size: 20px; }
+
+  .blog h3 {
+    text-align: center;
+    font-size: 14px; }
+
+  .post h3 {
+    text-align: center;
+    font-size: 14px; } }
 @media all and (max-width: 600px) {
   #site-header {
     height: 130px;
@@ -977,28 +1046,12 @@ article.comment {
 
   #access ul li a {
     padding: 5px;
-    margin: 0; }
-
-  #copyright a {
-    display: none; }
-
-  #colophon .left {
-    width: 100%;
-    float: none;
-    text-align: center; } }
+    margin: 0; } }
+@media all and (max-width 560px) {
+  .aboutPage {
+    overflow: hidden; } }
 @media all and (max-width: 380px) {
   #site-header {
     height: 130px;
     background-position-y: 20px;
-    background-position-x: 220px; }
-
-  #colophon .left {
-    padding: 40px 0 10px 0; }
-
-  #colophon .right {
-    width: 100%;
-    text-align: center; }
-    #colophon .right span {
-      margin: 10px; }
-    #colophon .right nav {
-      padding: 0; } }
+    background-position-x: 220px; } }

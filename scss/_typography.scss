@@ -1,7 +1,6 @@
 /* Web fonts integration*/
 
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
-@import url(http://fonts.googleapis.com/css?family=Lora);
 
 $headingfont: 'Josefin Sans', sans-serif;
 
@@ -81,8 +80,8 @@ hr {
 /* Text elements */
 p {
 	line-height: 1.5;
-	font-size: 16px;
-	font-family: 'Lora', serif;
+	font-size: 18px;
+	font-family: 'Josefin Sans', sans-serif;
 
 }
 ul, ol {

@@ -18,6 +18,7 @@
 	<div id="copyright" class="left">
 			<!-- copyright goes here -->
 			&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?><br>
+			<a href="mailto:yes.thisisperfect@gmail.com">yes.thisisperfect@gmail.com</a><br>
 			<a href="http://kristenspencer.ca" rel="nofollow" target="new">Design & Development by kristen spencer</a>
 		</div>
 

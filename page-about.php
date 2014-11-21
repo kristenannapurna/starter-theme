@@ -22,7 +22,7 @@ get_header(); ?>
 				
 					<img class="img2" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 			
-			<div class="box box2"><p><?php the_field('about_the_company'); ?></p></div>
+			
 			
 
 		</div>

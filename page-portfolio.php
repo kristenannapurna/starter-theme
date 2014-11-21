@@ -17,6 +17,8 @@ get_header(); ?>
     </ul>
 
     <section id="portfolio-grid">
+   <!--  <div class="grid-sizer"></div>
+    <div class="gutter-sizer"></div> -->
 
     <?php if ( have_posts() ) : ?>
         <!-- there IS content for this query -->
@@ -28,7 +30,7 @@ get_header(); ?>
                 <?php $image = get_sub_field('image'); ?>
 
                    <a rel="gallery" class="fancybox fancybox.image" data-fancybox-title = " <?php the_sub_field('credits'); ?> " href="<?php echo $image['url'] ?> ">
-                    <img src="<?php echo $image['sizes']['thumbnail'] ?>" alt="<?php echo $image['title']?>">
+                    <img src="<?php echo $image['sizes']['post-thumbnail'] ?>" alt="<?php echo $image['title']?>">
                    </a> 
                  </div>
             <?php endwhile ?>

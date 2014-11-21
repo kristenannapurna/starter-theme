@@ -28,8 +28,9 @@ if ( ! function_exists( 'starter_theme_setup' ) ):
 
         // Enable support for Post Thumbnails on posts and pages
         add_theme_support( 'post-thumbnails' );
+        set_post_thumbnail_size(200, 200, true);
         add_image_size('Blog Archive', 550, 290, true);
-        add_image_size('Banner', 1000, 150, true);
+        add_image_size('Banner', 1000, 600, true);
 
         // Enable support for Post Formats.
         add_theme_support( 'post-formats', array( 

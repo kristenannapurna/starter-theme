@@ -119,13 +119,14 @@ img {
 
 //portfolio page
 
+
 #portfolio-grid{
-	max-width: 900px;
+	max-width: 100%;
 	margin: 0 auto;
 	.portfolio-item{
 		position: relative;
 		float: left;
-		margin: 10px;
+		margin-bottom: 10px;
 		padding: 0;
 	}
 }
@@ -183,12 +184,17 @@ div.aboutImage img{
 .aboutPage{
 	max-width: 900px;
 	margin-bottom: 100px;
+	.img2{
+		position: absolute;
+		top: 160px;
+		left: -110px;
+		z-index: -1;
+	}
 	.box, img{
-		display: inline-block;
 		width: 50%;
-		float: left;
 	}
 	.box{
+		margin: 0 auto;
 		border: 3px solid #222;
 		padding: 40px;
 		text-align: center;
@@ -199,19 +205,17 @@ div.aboutImage img{
 			line-height: 2;
 		}
 	}
-	.box1{
-		transform: rotate(-10deg);
-		top: 60px;
-	}
 
-	.box2{
-		transform: rotate(10deg);
-	}
-
-	.img2{
-		position: relative;
+	img[alt="annie"]{
+		position: absolute;
+		top: 30px;
+		right: -110px;
 		z-index: -1;
 	}
+	
+
+
+	
 
 
 }

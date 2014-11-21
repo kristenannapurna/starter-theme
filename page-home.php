@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <section id="primary" role="main">
- <a class="clearfix" href="/thisisperfect/portfolio">
+ <a class="clearfix" href="/portfolio">
  	<div class="galleryWall clearfix">
  		<div class="grid-sizer"></div>
  		<div class="gutter-sizer"></div>
@@ -24,9 +24,9 @@ get_header(); ?>
 		<img class="galleryItem horizontal" src="<?php bloginfo('template_directory') ?>/assets/images/portfolio9.jpeg" alt="">
 		<img class="galleryItem vertical" src="<?php bloginfo('template_directory') ?>/assets/images/portfolio10.jpg" alt="">
 		<img class="galleryItem horizontal" src="<?php bloginfo('template_directory') ?>/assets/images/portfolio5.png" alt="">
-		<img class="galleryItem vertical" src="<?php bloginfo('template_directory') ?>/assets/images/portfolio14.png" alt="">
+		<img class="galleryItem vertical" src="<?php bloginfo('template_directory') ?>/assets/images/Portfolio14.png" alt="">
 		<img class="galleryItem vertical" src="<?php bloginfo('template_directory') ?>/assets/images/portfolio2.jpg" alt="">
-		<img class="galleryItem horizontal" src="<?php bloginfo('template_directory') ?>/assets/images/portfolio13.png" alt="">
+		<img class="galleryItem horizontal" src="<?php bloginfo('template_directory') ?>/assets/images/Portfolio13.png" alt="">
 
 	</div> 
 </a>
